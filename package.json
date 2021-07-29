@@ -1,0 +1,26 @@
+{
+  "name": "@7inch/storage",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "repository": "https://github.com/7inch/storage.git",
+  "author": "lwy1010 <im.leewy@gmail.com>",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "rollup -c",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "esbuild": "^0.12.16",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.55.0",
+    "rollup-plugin-dts": "^3.0.2",
+    "rollup-plugin-esbuild": "^4.5.0",
+    "typescript": "^4.3.5"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2
+  },
+  "license": "MIT"
+}
