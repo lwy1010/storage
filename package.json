@@ -8,7 +8,8 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "rollup -c",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "release": "npx bumpp --commit --tag --push"
   },
   "devDependencies": {
     "esbuild": "^0.12.16",
