@@ -1,6 +1,6 @@
 {
   "name": "@7inch/storage",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "repository": "https://github.com/7inch/storage.git",
@@ -8,7 +8,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "rollup -c",
-    "prepare": "npm run build",
+    "prepublishOnly": "npm run build",
     "release": "npx bumpp --commit --tag --push"
   },
   "devDependencies": {
