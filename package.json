@@ -9,7 +9,7 @@
     "prebuild": "rimraf dist",
     "build": "rollup -c",
     "prepublishOnly": "npm run build",
-    "release": "npx bumpp --commit --tag --push"
+    "release": "npx bumpp --commit --tag --push && npm publish --access public"
   },
   "devDependencies": {
     "esbuild": "^0.12.16",
