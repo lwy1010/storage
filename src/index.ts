@@ -7,12 +7,12 @@ class Storage {
     this.storage = window[type];
   }
 
-  get(key: string, parse: boolean) {
+  get<T>(key: string, parse = true): T {
     const value = this.storage.getItem(key);
     return value && parse ? JSON.parse(value) : value;
   }
 
-  set(key: string, value: any, parse: boolean) {
+  set(key: string, value: any, parse = true) {
     this.storage.setItem(key, parse ? JSON.stringify(value) : value);
   }
 
@@ -30,8 +30,6 @@ class Storage {
   }
 }
 
-const localStore = new Storage("localStorage");
+export const localStore = new Storage("localStorage");
 
-const sessionStore = new Storage("sessionStorage");
-
-export { localStore, sessionStore };
+export const sessionStore = new Storage("sessionStorage");
