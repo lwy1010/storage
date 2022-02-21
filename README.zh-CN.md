@@ -4,32 +4,27 @@
 
 [English](README.md) | [中文](README.zh-CN.md)
 
-## Introduction
+## 介绍
 
-A basic library wrapper with localStorage and sessionStorage, base on Typescript and rollup.
+一个简单地封装了 localStorage and sessionStorage 的库，基于 Typescript 和 rollup 编写。
 
-## Install
+## 安装
 
 ```sh
 npm i @7inch/storage
 ```
 
-## Usage
+## 用户
 
-Take localStorage for example(same as sessionStorage):
+以 localStorage 为例(sessionStorage 的用法与此相似):
 
 ```js
 import { localStore, sessionStore } from "@7inch/storage";
 
-// set a data item
 localStore.set("foo", 10);
-// get a data item
 localStore.get("foo");
-// remove a data item
 localStore.remove("foo");
-// check a data item if exists
 localStore.has("foo");
-// clear all items
 localStore.clear();
 ```
 
